@@ -1,0 +1,1 @@
+var fruits = ["apple", "strawberry", "banana", "orange","mango"];
