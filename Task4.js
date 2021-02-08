@@ -1,13 +1,11 @@
 function Info(options= {courseName, courseDuation,courseOwner}){
-    if(arguments[1] || (options.courseDuration == null &&
-                        options.courseOwner == null &&
-                        options.courseName == null) )throw new Error("Invalid Input"); 
+    if(arguments[1] )throw new Error("Invalid Input"); 
     
    
     for(var i in arguments[0]) 
         {
             var prop = i.toString();
-            console.log(prop)
+            //console.log(prop)
             if(prop!="courseDuration" && prop!= "courseOwner" && prop!="courseName") 
                {
                    throw new Error("Invalid Input"); 
@@ -33,6 +31,6 @@ Info({courseDuration: 5});
 Info({courseOwner: "Eng. Niveen"});
 Info({courseOwner: "Eng. Niveen", courseDuration: 5});
 Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5});*/
-Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5 , extra: 9});
+Info({});
 //Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5},1);
 //Info(1);
