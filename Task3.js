@@ -12,8 +12,13 @@ console.log(fruits.filter((item, index) => {
     return item.charAt(0) == 'b' || item.charAt(0) == 's' ;
 }));
 
-console.log(fruits.map((item, index) => {
+var liked = fruits.map((item, index) => {
     if(item == "orange" || item == "mango")
         {return "I like this fruit";}
     return "I don't like this fruit";
-}));
+});
+
+
+console.log(liked);
+
+liked.forEach((item) => console.log(item));
