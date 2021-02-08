@@ -1,7 +1,15 @@
 function Info(options= {courseName, courseDuation,courseOwner}){
-    if(arguments[1] || (options.courseDuation == null &&
+    if(arguments[1] || (options.courseDuration == null &&
                         options.courseOwner == null &&
-                        options.courseName == null) )throw new Error("Invalid Input");
+                        options.courseName == null) )throw new Error("Invalid Input"); 
+    for(var i in arguments[0].prototype) 
+        {
+            var prop = i.toString();
+            if(i!="courseDuration" || i!= "courseOwner" || "courseName") 
+               {
+                   throw new Error("Invalid Input"); 
+               }
+        }
     let def = {
         courseName: "ES6",
         courseDuration: 4,
@@ -17,5 +25,6 @@ Info({courseDuration: 5});
 Info({courseOwner: "Eng. Niveen"});
 Info({courseOwner: "Eng. Niveen", courseDuration: 5});
 Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5});
-Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5},1);
-Info(1);
+Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5, hello:9});
+//Info({courseName: "React", courseOwner: "Eng. Niveen", courseDuration: 5},1);
+//Info(1);
