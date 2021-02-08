@@ -11,3 +11,9 @@ console.log(fruits.some((item, index) => {
 console.log(fruits.filter((item, index) => {
     return item.charAt(0) == 'b' || item.charAt(0) == 's' ;
 }));
+
+console.log(fruits.map((item, index) => {
+    if(item == "orange" || item == "mango")
+        {return "I like this fruit";}
+    return "I don't like this fruit";
+}));
