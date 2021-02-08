@@ -8,3 +8,6 @@ console.log(fruits.some((item, index) => {
     return item.charAt(0) == 'a';
 }));
 
+console.log(fruits.filter((item, index) => {
+    return item.charAt(0) == 'b' || item.charAt(0) == 's' ;
+}));
